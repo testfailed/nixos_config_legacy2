@@ -1,0 +1,8 @@
+result
+
+.devenv/
+.direnv/
+
+iso/nixos.iso
+
+.DS_Store
