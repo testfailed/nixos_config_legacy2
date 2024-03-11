@@ -51,20 +51,20 @@
     # pkgs.zigpkgs.master
 
     # CUSTOM:
-    # pkgs.chezmoi
-    # pkgs.watchman
+    # pkgs.python3
+    # pkgs.python312 # NOTE: conflicts with python311
+    # pkgs.terraform
+    # pkgs.terraform-ls
     pkgs.ansible
     pkgs.awscli2
     pkgs.buf
+    pkgs.chezmoi
     pkgs.google-cloud-sdk
     pkgs.kubectl
-    # pkgs.python3
-    # pkgs.python312 # NOTE: conflicts with python311
     pkgs.python311   # NOTE: also try python-rewrite
     pkgs.redis
-    # pkgs.terraform
-    # pkgs.terraform-ls
     pkgs.unzip
+    pkgs.watchman
 
     pkgs.cachix
 
