@@ -15,6 +15,12 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  # services.gpg-agent = {
+  #   enable = true;
+  #   defaultCacheTtl = 1800;
+  #   enableSshSupport = true;
+  # };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -22,11 +28,17 @@
     # "Hello, world!" when run.
     pkgs.hello
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
+    # It is sometimes useful to fine-tune packages, for example, by applying
+    # overrides. You can do that directly here, just don't forget the
+    # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+    # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [
+        "FantasqueSansMono"
+        "Hack"
+        "JetBrainsMono"
+        "Meslo"
+    ]; })
 
     # You can also create simple shell scripts directly inside your
     # configuration. For example, this adds a command 'my-hello' to your
@@ -38,6 +50,7 @@
     pkgs.asciinema
     pkgs.bat
     pkgs.fd
+    pkgs.fortune
     pkgs.fzf
     pkgs.gh
     pkgs.htop
